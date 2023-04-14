@@ -1,8 +1,55 @@
-# Yolov5-for-tree-species-classification-in-point-cloud-derived-images
+# Introduction
+This workflow performs tree species classification on cross section images of individual tree point clouds using a YOLOv5 classification model. 
+
+# Setup
+## Get Yolov5
+Get YOLOv5 from here: https://github.com/ultralytics/yolov5
+
+## Set up Julia
+Clone this repository, go to ./treeprojection, which contains a project.toml, a manifest.toml and the julia script (treeprojection.jl), and activate this julia project. 
+
+# Data preparation 
+## Folder structure
+Create a tree spiecies oriented folder structure as shown below and store your point clouds in las format 1.2 into these folders. Note that the structure is 
+
+```bash
+├── pointclouds
+│   ├── tree_species_1
+│   │   ├── tree.las
+│   │   ├── tree.las
+│   │   ├── ...
+│   ├── tree_species_2
+│   │   ├── tree.las
+│   │   ├── tree.las
+│   │   ├── ...
+│   ├── ...
+│   │   ├── tree.las
+│   │   ├── tree.las
+│   │   ├── ...
+│   ├── tree_species_99
+│   │   ├── tree.las
+│   │   ├── tree.las
+│   │   ├── ...
+```
+Create a similar tree spiecies oriented folder structure with empty folders for the output images. The treeprojection.jl script expects named folder structures as input and output (see below).
+
+# Creating cross sections from individual tree point clouds with treeprojection.jl
+Go to the folder of your julia installation and run the following command:
+> julia --project=./pathto/treeprojection -O treeprojection.jl ./pathto/pointclouds ./pathto/output
+
+The treeprojection.jl script is built for parallel computing. It creates four cross section images (see below) from different angles of each passed las-file.
 
 
 # Train- Validation-dataset split
+Perform a 
+
 In order to train the YOLO classification model and to validate the performance during training we randomly split the original tre3d training-dataset into a training- (90%) and validation (10%) dataset. 
+
+
+
+# Yolov5-for-tree-species-classification-in-point-cloud-derived-images
+
+
 
 # Derivation of images from single Tree point clouds
 ![00069_0](https://user-images.githubusercontent.com/78412402/226636637-7d45849d-55ef-4d1f-8f39-362403407133.png)

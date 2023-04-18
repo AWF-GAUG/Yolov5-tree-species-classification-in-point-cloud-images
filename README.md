@@ -90,7 +90,7 @@ Apply the R-Script "" on the text files created by the application of the traine
 
 # Our results
 In order to train the YOLO classification model and to validate the performance during training we randomly split the original [tre3d](https://github.com/stefp/Tr3D_species) training-dataset into a training- (90%) and validation (10%) dataset. We performed this 90% / 10% split for each tree species.
-Using the above presented workflow our trained YOLOv5 classification model achieved an overall accuracy of 84 % over all 33 tree species classes on the validation dataset.The best performing YOLO classification model was trained after 26 epochs. The class specific accuracies (confusion matrix) achieved by the application of the trained YOLO model on the validataion dataset are depicted here:
+Using the above presented workflow our trained YOLOv5 classification model achieved an overall accuracy of 84 % over all 33 tree species classes on the validation dataset.The best performing YOLO classification model was trained after 26 epochs. The class specific accuracies achieved by the application of the trained YOLO model on the validataion dataset and the model summary are depicted here:
 
 ![tr3d_spec_classification_validation](https://user-images.githubusercontent.com/78412402/226630824-a4b1ffc8-60a2-4040-95b5-c702de010ff4.png)
 

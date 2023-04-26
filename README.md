@@ -83,7 +83,10 @@ After training apply the trained YOLOv5 classification model to a test data set.
 
 > python predict.py -- weight ./runs/train-cls/Your_EXP/weights/best.pt --sources path/to/test_data_images --save-txt
 
-As a result YOLOv5 saves the predicted classes of each cross section image in a result folder as text files. Use these text files for the next step. Since you have four cross section images of a single tree point cloud, it can happen that YOLOv5 predicts different tree species for each of these images. In order to get the final tree species prediction for the individual tree point cloud apply the r script "" on the text files created by the application of the trained YOLOv5 classification model on the test dataset (see below). 
+As a result YOLOv5 saves the predicted classes of each cross section image in a result folder as text files. Use these text files for the next step. Since you have four cross section images of a single tree point cloud, you get four classification results from your trained yolo model for each single tree point cloud. In order to get the final tree species prediction for the individual tree point cloud apply the r script "" on the text files created by the application of the trained YOLOv5 classification model on the test dataset (see below). 
+
+# Get final classification results
+Open the R-Srcipt "final_predictions.r" and use the path to the text files containing the yolo model predictions from the step above as input path. Additionally, sepcify the output folder and the output file name in the R-Script. Afterwards just run the R-Script. As a result it will save a csv file containing the final class prediction results for each individual point cloud.  
 
 # Get final tree species prediction for each individual tree point cloud
 Apply the R-Script "" on the text files created by the application of the trained YOLOv5 classification model on the test dataset. The result is a csv file containing the tree id's and the final casts for tree species. 

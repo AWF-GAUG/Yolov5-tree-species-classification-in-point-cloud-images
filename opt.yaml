@@ -1,0 +1,21 @@
+model: yolov5x-cls.pt
+epochs: 100
+batch_size: 32
+imgsz: 300
+nosave: false
+cache: null
+device: 0,1
+workers: 8
+name: exp
+exist_ok: false
+pretrained: true
+optimizer: AdamW
+lr0: 0.001
+decay: 5.0e-05
+label_smoothing: 0.1
+cutoff: null
+dropout: null
+verbose: false
+seed: 0
+local_rank: -1
+

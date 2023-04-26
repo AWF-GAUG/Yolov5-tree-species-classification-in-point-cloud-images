@@ -96,9 +96,6 @@ Using the above presented workflow our trained YOLOv5 classification model achie
 
 
 # Hyperparamteres used for training 
-We used the following hyperparameters for training
-|Hyperparamters|value|
-|--------------|-----|
-|learning rate |0.001|
+The hyperparamters we used for training are uploaded as a yaml file ("opt.yaml").
 
 

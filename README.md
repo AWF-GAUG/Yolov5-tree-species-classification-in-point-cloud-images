@@ -3,7 +3,7 @@ This workflow performs tree species classification on cross section images of in
 
 # Setup
 ## Get Yolov5
-Download YOLOv5 and setup a working environment as explained [here](https://github.com/ultralytics/yolov5).
+Download YOLOv5 and setup a working environment as explained [here](https://github.com/ultralytics/yolov5). Or use yolo calssification scripts from this repository (see "./yolo_classification").
 
 ## Get Julia
 Download Julia from [here](https://julialang.org/downloads/).

@@ -61,7 +61,7 @@ end
 		
 			selected_points = shifted_points#[scalar_prod .> 0]
 		
-			global projected_points = [project_to_plane(p, u, v) for p in selected_points]
+			projected_points = [project_to_plane(p, u, v) for p in selected_points]
 		
 			xext = extrema(getindex.(projected_points, 1))
 			yext = extrema(getindex.(projected_points, 2))
